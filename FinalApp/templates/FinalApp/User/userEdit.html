@@ -1,0 +1,37 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!--Upper left button-->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!-- User Edit Section-->
+{% block h2titulo %}
+
+<h3= "color:white"> Editar Usuario </h3>
+
+    <div class="opacity-50">
+        <div style="color:white">
+            {% if myForm.errors %}
+            <div class="d-flex justify-content-center">
+            <h2 style="color:white ">Corrija los datos</h2>
+    </div>
+            {% endif %}
+        <form action="" method="POST"> {%csrf_token%}
+            <div class="d-flex justify-content-center">
+                <table>
+                    {{myForm.as_table}}
+                </table>
+            </div>
+                <input type="submit","color:transparent", value="Enviar", style="color:black">
+        </form>
+    </div>
+ </div>
+{% endblock h2titulo %}
+
+<!-- Boton -->
+{% block botonhome %}
+
+{% endblock %}

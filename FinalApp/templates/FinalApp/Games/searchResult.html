@@ -1,0 +1,39 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!-- Title -->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!--Python H1 Title-->
+{% block titulo %}
+Gaming Corner 
+{% endblock %}
+
+{% block h2titulo %}
+Resultados de la busqueda
+{% endblock %}
+
+{% block botonhome %}
+<!-- Search Results -->
+
+    {% if results %}
+
+        {% for res in results %}
+    <div style='color:white'
+        <ul>
+            <li>Juego: {{res.gameName}}</li>
+            <li>Genero: {{res.gameGenre}}</li>
+            <li>Lanzamiento: {{res.gameRelease}}</li>
+            <li>Puntaje: {{res.gameScore}}</li>
+            <li>Review: {{res.gameReview}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p> No hay resultados para este juego.</p>
+    {% endif %}
+    
+{% endblock %}

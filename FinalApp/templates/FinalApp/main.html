@@ -1,0 +1,44 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!-- Title -->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!--Python H1 Title-->
+{% block titulo %}
+Gaming Corner<br>
+{% endblock %}
+
+<!--Python H2 Title-->
+{% block h2titulo %}
+<div class="text-center">
+    <h2>{{message}}</h2>
+</div>
+<h4>Encontrá y compartí clasicos del Gaming</h4>
+{% endblock %}
+
+{% block LinkBoton %} 
+    {% url 'Search' %}
+{% endblock %}
+
+{% block busquedapy %}
+</div>
+    <div class="card mb-4">
+        <form action="/Games/searchResult/" method="GET">
+            <div class="card-header">Buscar Juego</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Ingresa el nombre..." name="gameName" id="gameName" />
+                    <input type="submit" value="Buscar">
+                </div>
+            </div>
+        </form> 
+    </div>
+</div>
+
+{% endblock %}
+
+<!--Python comision: 41635-->

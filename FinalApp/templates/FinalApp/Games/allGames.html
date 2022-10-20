@@ -1,0 +1,60 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+
+<!-- Title -->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!--Encabezado pagina-->
+{% block titulopagina %} 
+Juegos
+{% endblock %}
+
+<!-- Python H1 Title -->
+{% block titulo %}
+<h1> Juegos </h1>
+{% endblock %}
+
+<!-- H2 Title -->
+{% block AllGames %}
+<a href="{% url 'Add Releases' %}">Compartí proximos Juegos</a>
+<div class='text-white'
+        {% for rx in results_release %}
+            <ul>
+                Nombre: {{rx.upcomingName}} <br>
+                Lanzamiento: {{rx.upcomingRelease}}<br><br>
+        
+                <img src="{{rx.upcomingsWallpaper.url}}" class="img-fluid" alt="Imagen no existente"  <br>
+                <br><br><button="color:transparent" class="text-center"> 
+                <a href ="{% url 'Edit Game' rx.upcomingName %}" > Editar</a>
+            </button><br>
+            
+            </ul>
+            <p>************************************</p>
+        {% endfor %}
+            
+        {% for rx in results_oldGame %}
+        <span class="border border-primary">
+        <ul> 
+            <i>Aporte por</i>: {{rx.gameDeveloper}}<br>
+            <i>Nombre</i>: {{rx.gameName}}<br> 
+            <i>Genero</i>: {{rx.gameGenre}}<br>
+            <i>Lanzamiento</i>: {{rx.gameRelease}}<br>
+            <i>Puntaje</i>: {{rx.gameScore}}<br>
+            <i>Review</i>: {{rx.gameReview}}<br>
+        
+        </ul>  
+    </span>  
+    
+        {% endfor %}
+    </div>  
+{% endblock %}
+
+<!--Boton home-->
+{% block botonhome %}
+
+{% endblock %}
+

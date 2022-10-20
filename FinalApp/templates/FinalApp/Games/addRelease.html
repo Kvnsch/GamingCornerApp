@@ -1,0 +1,35 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!-- Title -->
+{% block navbarbrand %}
+k v n
+{% endblock %}
+
+<!--Python H1 Title-->
+{% block titulo %}
+<h1> Comparti tu juego!</h1>
+{% endblock %}
+
+<!--H2 Title-->
+{% block h2titulo %}
+
+{% endblock %}
+
+<!--Boton Home-->
+{% block botonhome %}
+<div class="d-flex justify-content-center">
+<div class='text-white'>
+    <div class="opacity-50">
+        <form action=""  enctype="multipart/form-data" method="POST">  {% csrf_token %}
+
+            <table>
+                {{myForm.as_table}}
+            </table>
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

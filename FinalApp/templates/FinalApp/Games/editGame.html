@@ -1,0 +1,42 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!-- Title -->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!--Python H1 Title-->
+{% block titulo %}
+Gaming Corner
+{% endblock %}
+
+<!--H2 Title-->
+{% block h2titulo %}
+    {% if myForm.errors %}
+
+    <h3 style="color:red"> Los datos ingresados son incorrectos </h3>
+    
+    {% endif %}
+<!-- Edit -->
+<form action="" enctype="multipart/form-data"  method="POST"> {%csrf_token%}
+
+    <table>
+
+        {{myForm.as_table}}
+
+    </table>
+
+    <input type="submit", value="Enviar", style="color:red">
+
+</form>
+
+<form action="" method=="POST"
+    <input type="submit" value="{{results}}">
+</form>
+
+{% endblock %}
+
+{% block botonhome %}
+{% endblock %}

@@ -1,0 +1,34 @@
+<!--Loader Mother HTML template-->
+{% extends "FinalApp/mother.html" %}
+{% load static %}
+
+<!-- Title -->
+{% block navbarbrand %}
+Home
+{% endblock %}
+
+<!--Python H1 Title-->
+{% block titulo %}
+<H1>Registrate para colaborar</h1>
+{% endblock %}
+
+<!--Python H2 Titulo-->
+{% block h2titulo %}
+<div class='text-white'>
+    <div class='text-center'>
+    <div class="opacity-50">
+        <form action="" method="POST"> {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Registrate</button>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock h2titulo %}
+
+{% block botonhome %}
+{% endblock botonhome%}
+
+
+<!--Python comision: 41635-->
+
